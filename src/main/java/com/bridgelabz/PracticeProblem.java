@@ -9,7 +9,7 @@ public class PracticeProblem {
     static String defaultValue6;
 
     public static void main(String[] args) {
-        System.out.println("Default values of primitive data types are as follows:");
+        System.out.println("Default values of primitive data types are as follows: ");
         System.out.println("Default values of boolean = " + defaultValue1);
         System.out.println("Default values of double = " + defaultValue2);
         System.out.println("Default values of float = " + defaultValue3);
