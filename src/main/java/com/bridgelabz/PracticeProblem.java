@@ -2,13 +2,18 @@ package com.bridgelabz;
 
 public class PracticeProblem {
     public static void main(String[] args) {
-        String string1 = "Hello World";
-        String string2 = "Hello World";
-        String string3 = "Hello Java ";
-        System.out.println("string 1 = " + string1 + " \nstring 2 = " + string2 + " \nstring 3 = " + string3);
-        boolean retval1 = string2.equals(string1);
-        boolean retval2 = string2.equals(string3);
-        System.out.println("string 2 is equal to string 1 = " + retval1);
-        System.out.println("string 2 is equal to string 3 = " + retval2);
+        int sum = 0;
+        int count = 0;
+        System.out.println("Calculating Sum of command line Args Integers ");
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
+            try {
+                sum = sum + Integer.parseInt(args[i]);
+            } catch (NumberFormatException a) {
+                count++;
+            }
+        }
+        System.out.println("Sum of integers : " + sum);
+        System.out.println("Count of non integers : " + count);
     }
 }
