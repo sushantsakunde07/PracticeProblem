@@ -1,17 +1,18 @@
 package com.bridgelabz;
 
+import java.util.*;
+
 public class PracticeProblem {
-    static int staticElement = 10;
 
-    static {
-        System.out.println("Static block");
-    }
-
-    public static void main(String args[]) {
-        System.out.println("Main method");
-        System.out.println("Static integer : " + staticElement);
-        student s1 = new student();
-        s1.write();
-
+    public static void main(String[] args) {
+        int year = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Year");
+        year = scan.nextInt();
+        scan.close();
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+            System.out.println("It is Leap year");
+        else
+            System.out.println("It is Not a leap year");
     }
 }
